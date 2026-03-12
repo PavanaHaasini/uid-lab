@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Amrita Vishwa Vidyapeetham</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Segoe UI, sans-serif;
+background-color:midnightblue;
+color:white;
+}
+
+header{
+text-align:center;
+padding:20px 10px 5px 10px;
+font-size:32px;
+font-weight:bold;
+color:gold;
+text-shadow:2px 2px 6px black;
+}
+
+.subheading{
+text-align:center;
+font-size:16px;
+margin-bottom:15px;
+color:whitesmoke;
+}
+
+nav{
+text-align:center;
+margin-bottom:15px;
+}
+
+nav button{
+background:none;
+color:white;
+padding:6px 16px;   /* smaller tabs */
+margin:4px;
+border:1.5px solid gold;
+border-radius:20px;
+font-size:13px;
+font-weight:bold;
+cursor:pointer;
+transition:0.3s;
+}
+
+nav button:hover{
+background:gold;
+color:black;
+}
+
+.layout{
+display:flex;
+padding:10px 30px;
+gap:25px;
+}
+
+.login{
+width:30%;
+padding:15px;
+background-color:slategray;
+border-radius:15px;
+box-shadow:0px 0px 10px black;
+}
+
+.login h2{
+text-align:center;
+color:gold;
+margin-bottom:15px;
+font-size:18px;
+}
+
+input{
+width:100%;
+padding:8px;
+margin-bottom:12px;
+border:none;
+border-radius:20px;
+outline:none;
+font-size:13px;
+}
+
+.login button{
+width:100%;
+padding:8px;
+background:gold;
+border:none;
+border-radius:20px;
+font-weight:bold;
+cursor:pointer;
+font-size:13px;
+}
+
+.login button:hover{
+background:white;
+color:black;
+}
+
+.details{
+width:70%;
+background:white;
+color:black;
+padding:15px;
+border-radius:15px;
+height:320px;   /* reduced height */
+overflow:hidden;
+}
+
+.campus{
+display:none;
+text-align:center;
+}
+
+.campus img{
+width:220px;   /* smaller image */
+border-radius:10px;
+margin-bottom:10px;
+}
+
+.campus p{
+font-size:13px;
+text-align:justify;
+}
+
+</style>
+
+<script>
+function showCampus(id){
+var campuses=document.getElementsByClassName("campus");
+for(var i=0;i<campuses.length;i++){
+campuses[i].style.display="none";
+}
+document.getElementById(id).style.display="block";
+}
+</script>
+
+</head>
+
+<body onload="showCampus('amaravati')">
+
+<header>
+Amrita Vishwa Vidyapeetham
+</header>
+
+<div class="subheading">
+Explore Our Campuses
+</div>
+
+<nav>
+<button onclick="showCampus('amaravati')">Amaravati</button>
+<button onclick="showCampus('amritapuri')">Amritapuri</button>
+<button onclick="showCampus('coimbatore')">Coimbatore</button>
+<button onclick="showCampus('chennai')">Chennai</button>
+</nav>
+
+<div class="layout">
+
+<div class="login">
+<h2>Student Login</h2>
+<form>
+<input type="text" placeholder="Username">
+<input type="password" placeholder="Password">
+<button type="submit">Login</button>
+</form>
+</div>
+
+<div class="details">
+
+<div id="amaravati" class="campus">
+<h3>Amaravati Campus</h3>
+<img src="amaravati.jpg">
+<p>
+Located in Andhra Pradesh with modern infrastructure,
+smart classrooms, research support and strong placement training.
+</p>
+</div>
+
+<div id="amritapuri" class="campus">
+<h3>Amritapuri Campus</h3>
+<img src="amritapuri.jpg">
+<p>
+Kerala campus near Arabian Sea offering engineering,
+arts and science programs with research focus.
+</p>
+</div>
+
+<div id="coimbatore" class="campus">
+<h3>Coimbatore Campus</h3>
+<img src="coimbatore.jpg">
+<p>
+Main Tamil Nadu campus with world-class labs,
+medical, engineering and management programs.
+</p>
+</div>
+
+<div id="chennai" class="campus">
+<h3>Chennai Campus</h3>
+<img src="chennai.jpg">
+<p>
+Technology-focused campus with modern labs,
+industry training and internship opportunities.
+</p>
+</div>
+
+</div>
+</div>
+
+</body>
+</html>

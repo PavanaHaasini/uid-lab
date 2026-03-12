@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Our Services</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: whitesmoke;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: navy;
+            margin-top: 40px;
+            font-size: 36px;
+        }
+
+        .cardcontainer {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            padding: 50px;
+            background-color: lightsteelblue;
+            margin: 40px;
+            border-radius: 20px;
+        }
+
+        .card {
+            background-color: white;
+            width: 280px;
+            border-radius: 15px;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 4px 4px 12px gray;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            box-shadow: 6px 6px 20px black;
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            border-radius: 10px;
+        }
+
+        .card h3 {
+            color: darkblue;
+            margin-top: 15px;
+        }
+
+        .card p {
+            font-size: 14px;
+            color: dimgray;
+        }
+
+        button {
+            background-color: teal;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: rgb(210, 22, 22);
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>Digital Marketing Services</h1>
+
+    <div class="cardcontainer">
+
+        <div class="card">
+            <img src="seo.jpg" alt="SEO Services">
+            <h3>SEO Optimization</h3>
+            <p>
+                We improve your website ranking on search engines to increase traffic and visibility.
+            </p>
+            <button>Learn More</button>
+        </div>
+
+        <div class="card">
+            <img src="socialmedia.jpg" alt="Social Media Marketing">
+            <h3>Social Media Marketing</h3>
+            <p>
+                We promote your brand on social platforms to boost engagement and audience growth.
+            </p>
+            <button>Learn More</button>
+        </div>
+
+        <div class="card">
+            <img src="contentmarketing.jpg" alt="Content Marketing">
+            <h3>Content Marketing</h3>
+            <p>
+                We create creative and engaging content to attract customers and build brand trust.
+            </p>
+            <button>Learn More</button>
+        </div>
+
+    </div>
+
+</body>
+</html>

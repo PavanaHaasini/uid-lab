@@ -1,0 +1,397 @@
+L.PAVANA HAASINI CSE25033
+<!DOCTYPE html>
+<html>
+<head>
+<title>Trendy Cart</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Verdana;
+}
+
+body{
+background:#f1f6ff;
+}
+
+/* HEADER */
+
+header{
+background:linear-gradient(90deg,#6a11cb,#2575fc);
+color:white;
+text-align:center;
+padding:20px;
+font-size:30px;
+font-weight:bold;
+}
+
+/* SALE */
+
+.sale{
+background:#ff4d6d;
+color:white;
+text-align:center;
+padding:10px;
+font-weight:bold;
+}
+
+/* LAYOUT */
+
+.container{
+display:flex;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+width:220px;
+background:white;
+padding:20px;
+border-right:2px solid #ddd;
+}
+
+.sidebar h3{
+margin-bottom:15px;
+}
+
+.sidebar label{
+display:block;
+padding:10px;
+margin-bottom:10px;
+background:#e3ecff;
+border-radius:8px;
+cursor:pointer;
+font-weight:bold;
+}
+
+.sidebar label:hover{
+background:#c8d8ff;
+}
+
+/* PRODUCTS */
+
+.products{
+flex:1;
+padding:20px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+}
+
+/* CARD */
+
+.card{
+background:white;
+border-radius:12px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+text-align:center;
+padding:15px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:scale(1.05);
+}
+
+.card img{
+width:100%;
+height:160px;
+object-fit:cover;
+border-radius:10px;
+}
+
+.card h4{
+margin:10px 0;
+}
+
+.price{
+color:#ff006e;
+font-weight:bold;
+}
+
+button{
+margin-top:10px;
+padding:8px 15px;
+border:none;
+background:#06d6a0;
+color:white;
+border-radius:6px;
+cursor:pointer;
+font-weight:bold;
+}
+
+button:hover{
+background:#04b383;
+}
+
+/* FOOTER */
+
+footer{
+background:#2575fc;
+color:white;
+text-align:center;
+padding:15px;
+margin-top:20px;
+}
+
+/* RADIO BUTTONS */
+
+input{
+display:none;
+}
+
+/* CATEGORY FILTER */
+
+#electronics:checked ~ .container .electronics{display:block;}
+#electronics:checked ~ .container .clothing,
+#electronics:checked ~ .container .books,
+#electronics:checked ~ .container .appliances{display:none;}
+
+#clothing:checked ~ .container .clothing{display:block;}
+#clothing:checked ~ .container .electronics,
+#clothing:checked ~ .container .books,
+#clothing:checked ~ .container .appliances{display:none;}
+
+#books:checked ~ .container .books{display:block;}
+#books:checked ~ .container .electronics,
+#books:checked ~ .container .clothing,
+#books:checked ~ .container .appliances{display:none;}
+
+#appliances:checked ~ .container .appliances{display:block;}
+#appliances:checked ~ .container .electronics,
+#appliances:checked ~ .container .clothing,
+#appliances:checked ~ .container .books{display:none;}
+
+@media(max-width:768px){
+
+.container{
+flex-direction:column;
+}
+
+.sidebar{
+width:100%;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+Trendy Cart
+</header>
+
+<div class="sale">
+🔥 MEGA SALE – UP TO 60% OFF
+</div>
+
+<input type="radio" name="cat" id="electronics" checked>
+<input type="radio" name="cat" id="clothing">
+<input type="radio" name="cat" id="books">
+<input type="radio" name="cat" id="appliances">
+
+<div class="container">
+
+<div class="sidebar">
+<h3>Categories</h3>
+
+<label for="electronics">Electronics</label>
+<label for="clothing">Women's Clothing</label>
+<label for="books">Books</label>
+<label for="appliances">Home Appliances</label>
+
+</div>
+
+<div class="products">
+
+<!-- ELECTRONICS -->
+
+<div class="card electronics">
+<img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9" alt="Smartphone">
+<h4>Smartphone</h4>
+<p class="price">₹25,000</p>
+<button>Buy</button>
+</div>
+
+<div class="card electronics">
+<img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853" alt="Laptop">
+<h4>Laptop</h4>
+<p class="price">₹55,000</p>
+<button>Buy</button>
+</div>
+
+<div class="card electronics">
+<img src="https://media.gettyimages.com/id/172847218/photo/headphones.jpg?s=612x612&w=0&k=20&c=VXLKHUtGdD8pPH8PzRHS-87QndzDssZpMdsOfZNhKuU=" alt="Headphones">
+<h4>Headphones</h4>
+<p class="price">₹2,000</p>
+<button>Buy</button>
+</div>
+
+<div class="card electronics">
+<img src="https://images.unsplash.com/photo-1579586337278-3befd40fd17a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8c21hcnR3YXRjaHxlbnwwfHwwfHx8MA%3D%3D" alt="Smart Watch">
+<h4>Smart Watch</h4>
+<p class="price">₹5,000</p>
+<button>Buy</button>
+</div>
+
+<div class="card electronics">
+<img src="https://cdn.thewirecutter.com/wp-content/media/2025/03/BEST-IPAD-2048px-11thgen-pencil.jpg" alt="Tablet">
+<h4>Tablet</h4>
+<p class="price">₹15,000</p>
+<button>Buy</button>
+</div>
+
+<div class="card electronics">
+<img src="https://cdn.pixabay.com/photo/2016/11/29/03/53/camera-1867184_1280.jpg" alt="Camera">
+<h4>Camera</h4>
+<p class="price">₹30,000</p>
+<button>Buy</button>
+</div>
+
+<!-- WOMEN CLOTHING -->
+
+<div class="card clothing">
+<img src="https://images.unsplash.com/photo-1568252542512-9fe8fe9c87bb?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGRyZXNzfGVufDB8fDB8fHww" alt="Women Dress">
+<h4>Women Dress</h4>
+<p class="price">₹1200</p>
+<button>Buy</button>
+</div>
+
+<div class="card clothing">
+<img src="https://images.unsplash.com/photo-1602370463198-086436840055?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8d29tZW4lMjBqYWNrZXR8ZW58MHx8MHx8fDA%3D" alt="Women Jacket">
+<h4>Women Jacket</h4>
+<p class="price">₹2000</p>
+<button>Buy</button>
+</div>
+
+<div class="card clothing">
+<img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b" alt="Women T Shirt">
+<h4>Women T-Shirt</h4>
+<p class="price">₹800</p>
+<button>Buy</button>
+</div>
+
+<div class="card clothing">
+<img src="https://www.hancockfashion.com/cdn/shop/files/16111WhiteS_1.jpg?v=1734412830" alt="Women Shirt">
+<h4>Women Shirt</h4>
+<p class="price">₹1000</p>
+<button>Buy</button>
+</div>
+
+<div class="card clothing">
+<img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c" alt="Women Hoodie">
+<h4>Women Hoodie</h4>
+<p class="price">₹1800</p>
+<button>Buy</button>
+</div>
+
+<div class="card clothing">
+<img src="https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc" alt="Women Sweater">
+<h4>Women Sweater</h4>
+<p class="price">₹1400</p>
+<button>Buy</button>
+</div>
+
+<!-- BOOKS -->
+
+<div class="card books">
+<img src="https://images.unsplash.com/photo-1619164025195-985d31ae8844?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bm92ZWxzfGVufDB8fDB8fHww">
+<h4>Novel</h4>
+<p class="price">₹500</p>
+<button>Buy</button>
+</div>
+
+<div class="card books">
+<img src="https://images.unsplash.com/photo-1585059466160-5cd3af4c49d3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c2NpZW5jZSUyMGJvb2t8ZW58MHx8MHx8fDA%3D">
+<h4>Science Book</h4>
+<p class="price">₹650</p>
+<button>Buy</button>
+</div>
+
+<div class="card books">
+<img src="https://images.unsplash.com/photo-1767050401645-5fe0eebc0289?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGhpc3RvcnklMjBib29rfGVufDB8fDB8fHww">
+<h4>History Book</h4>
+<p class="price">₹550</p>
+<button>Buy</button>
+</div>
+
+<div class="card books">
+<img src="https://images.unsplash.com/photo-1580121441575-41bcb5c6b47c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZ3JhbW1pbmclMjBib29rfGVufDB8fDB8fHww">
+<h4>Programming Book</h4>
+<p class="price">₹700</p>
+<button>Buy</button>
+</div>
+
+<div class="card books">
+<img src="https://images.unsplash.com/photo-1643920508624-9ac3ae5a2adb?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGRpY3Rpb25hcnl8ZW58MHx8MHx8fDA%3D">
+<h4>Dictionary</h4>
+<p class="price">₹400</p>
+<button>Buy</button>
+</div>
+
+<div class="card books">
+<img src="https://images.unsplash.com/photo-1620336655055-088d06e36bf0?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Y29taWMlMjBib29rfGVufDB8fDB8fHww">
+<h4>Comics</h4>
+<p class="price">₹300</p>
+<button>Buy</button>
+</div>
+
+<!-- HOME APPLIANCES -->
+
+<div class="card appliances">
+<img src="https://images.unsplash.com/photo-1721613877687-c9099b698faa?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmVmcmlnZXJhdG9yfGVufDB8fDB8fHww">
+<h4>Refrigerator</h4>
+<p class="price">₹30000</p>
+<button>Buy</button>
+</div>
+
+<div class="card appliances">
+<img src="https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8d2FzaGluZyUyMG1hY2hpbmV8ZW58MHx8MHx8fDA%3D">
+<h4>Washing Machine</h4>
+<p class="price">₹20000</p>
+<button>Buy</button>
+</div>
+
+<div class="card appliances">
+<img src="https://images.unsplash.com/photo-1574269909862-7e1d70bb8078?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bWljcm93YXZlJTIwb3ZlbnxlbnwwfHwwfHx8MA%3D%3D">
+<h4>Microwave</h4>
+<p class="price">₹8000</p>
+<button>Buy</button>
+</div>
+
+<div class="card appliances">
+<img src="https://images.unsplash.com/photo-1722710070534-e31f0290d8de?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dmFjY3VtJTIwY2xlYW5lcnxlbnwwfHwwfHx8MA%3D%3D">
+<h4>Vacuum Cleaner</h4>
+<p class="price">₹7000</p>
+<button>Buy</button>
+</div>
+
+<div class="card appliances">
+<img src="https://plus.unsplash.com/premium_photo-1679943423706-570c6462f9a4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YWN8ZW58MHx8MHx8fDA%3D">
+<h4>Air Conditioner</h4>
+<p class="price">₹35000</p>
+<button>Buy</button>
+</div>
+
+<div class="card appliances">
+<img src="https://images.unsplash.com/photo-1738520420652-0c47cea3922b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZWxlY3RyaWMlMjBrZXR0bGV8ZW58MHx8MHx8fDA%3D">
+<h4>Electric Kettle</h4>
+<p class="price">₹1500</p>
+<button>Buy</button>
+</div>
+
+</div>
+
+</div>
+
+<footer>
+© 2026 Trendy Cart | All Rights Reserved
+</footer>
+
+</body>
+</html>
